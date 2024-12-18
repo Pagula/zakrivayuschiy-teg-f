@@ -278,13 +278,14 @@
   padding-block: 30px;
 }
 
+
 .modal[open]::backdrop {
-  background-color: #000; 
+  background-color: #000;
   filter: opacity(0.75);
 }
 
 .description-modal {
-  display: flex; 
+  display: flex;
   align-items: center;
   gap: 20px;
 }
