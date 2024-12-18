@@ -1,1 +1,34 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
+:root {
+    --page-main-font-family: 'Inter', sans-serif;
+    --page-accent-font-family: 'PressStart2P', fantasy;
+    --font-main-text: 400;
+    --font-main-title: 700;
+    --accent-font-size: 14px;
+    --page-background-image: repeating-linear-gradient(
+        to left,
+        #d3d3d3 0 2px,
+        #d3d3d300 2px 4px
+      ),
+      repeating-linear-gradient(to bottom, #d3d3d3 0 2px, #d3d3d300 2px 4px),
+      linear-gradient(to bottom, #e7e7e7 0.01%, #1a1a1a);
+  
+
+    --page-background-color: #fff;
+    --button-text-color: #fff;
+    --button-accent-color: #000;
+
+    --label-text-shadow: #fff;
+    --label-shadow: -1px 0 #fff, 0 1px #fff, 1px 0 #fff, 0 -1px #fff;
+    --text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    --border-line: 2px solid #000;
+
+    --header-container-width: min(100vw, 700px);
+    --section-inline-size: clamp(375px, 100vw, 700px);
+    --header-title-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
+    --header-title-accent-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
+
+    --heart-contur: #000;
+    --heart-core: #fff;
+    --heart-main: #f00;
+  }
