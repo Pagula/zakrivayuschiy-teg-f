@@ -14,8 +14,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-family: var(--page-main-font-family, 'Inter', sans-serif);
-  font-variation-settings: 'wght' 400 700;
+  font-family: var(--page-main-font-family, "Inter"), sans-serif;
+  font-variation-settings: "wght" 700;
   font-size: 18px;
   background-color: var(--page-background-color, #fff);
   background-image: var(--page-background-image);
@@ -59,25 +59,21 @@
 
 .header {
   display: flex;
-  align-items: center;
-  padding-block: 100px;
-}
-
-.header__container {
-  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 20px;
   border: var(--border-line, 2px solid #000);
-  font-family: var(--page-accent-font-family, 'PressStart2P', fantasy);
+  font-family: var(--page-accent-font-family, "PressStart2P"), fantasy;
   text-transform: uppercase;
   background-color: var(--page-background-color, #fff);
   padding-block: clamp(120px, 8.9vw, 128px);
   inline-size: var(--header-container-width, min(100vw, 700px));
+  margin-block: 100px;
 }
 
 .header__logo {
+  text-decoration: none;
   font-size: var(--header-title-accent-size, clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem));
 }
 
@@ -126,18 +122,26 @@
   z-index: 2;
   opacity: 0.5;
   color: var(--button-accent-color, #000);
-  font-family: var(--page-accent-font-family, 'PressStart2P', fantasy);
+  font-family: var(--page-accent-font-family, "PressStart2P"), fantasy;
   font-size: var(--accent-font-size, 14px);
-  inset-block-start: clamp(23px, calc(23px + (25 - 23) * ((100vw - 375px) / (1440 - 375))), 25px);
-  inset-inline-end: clamp(11px, calc(11px + (25 - 11) * ((100vw - 375px) / (1440 - 375))), 25px);
+  inset-block-start: clamp(
+    23px,
+    calc(23px + (25 - 23) * ((100vw - 375px) / (1440 - 375))),
+    25px
+  );
+  inset-inline-end: clamp(
+    11px,
+    calc(11px + (25 - 11) * ((100vw - 375px) / (1440 - 375))),
+    25px
+  );
   mix-blend-mode: hard-light;
   text-shadow: var(--label-shadow, -1px 0 #fff, 0 1px #fff, 1px 0 #fff, 0 -1px #fff);
 }
 
 @supports (-webkit-text-stroke: 1px var(--label-text-shadow)) {
   .article__image-label {
-      text-shadow: none;
-      -webkit-text-stroke: 1px var(--label-text-shadow, #fff);
+    text-shadow: none;
+    -webkit-text-stroke: 1px var(--label-text-shadow, #fff);
   }
 }
 
@@ -164,14 +168,15 @@
   position: relative;
   z-index: 1;
   color: var(--button-text-color, #fff);
-  font-family: var(--font-accent, 'PressStart2P', fantasy);
+  font-family: var(--font-accent, "PressStart2P"), fantasy;
   font-size: var(--accent-font-size, 14px);
   mix-blend-mode: difference;
 }
 
 .button {
+  appearance: none;
   position: relative;
-  border: var( --border-line, 2px solid #000);
+  border: var(--border-line, 2px solid #000);
   padding: 0;
   background-color: var(--bg-color, #fff);
   transition: 0.3s ease;
@@ -200,7 +205,7 @@
 }
 
 .button::after {
-  content: '';
+  content: "";
   position: absolute;
   inset: 0;
   background-color: var(--button-accent-color, #000);
@@ -239,10 +244,6 @@
   transition: 0.3s 0.03s linear;
 }
 
-.saving__section {
-  padding-block: 50px 105px;
-}
-
 .button-save {
   display: flex;
   flex-wrap: wrap;
@@ -251,9 +252,10 @@
   gap: 0.53rem;
   inline-size: clamp(310px, 81.6vw, 339px);
   block-size: clamp(55px, calc(84px - (84 - 55) * ((100vw - 375px))), 84px);
+  margin-block: 0 105px;
 }
 
-@media (width <= 600px) {
+@media (width <= 375px) {
   .button-save {
     flex-direction: column;
   }
@@ -274,10 +276,9 @@
   gap: 30px;
   max-width: clamp(341px, 100%, 357px);
   border: var(--border-line, 2px solid #000);
-  padding-inline: clamp(30px, calc(30px + (10 * ((1440px - 100vw) / 1065))), 40px);
+  padding-inline: clamp(30px, calc(30px + (10 * ((1440px - 100vw) / 1065))),40px);
   padding-block: 30px;
 }
-
 
 .modal[open]::backdrop {
   background-color: #000;
@@ -295,15 +296,14 @@
 }
 
 .modal__text {
-  font-family: var(--font-accent, 'PressStart2P', fantasy);
+  font-family: var(--font-accent, "PressStart2P"), fantasy;
   font-size: var(--accent-font-size, 14px);
   line-height: 150%;
   text-transform: uppercase;
-  inline-size: clamp(198px, calc(198px + (36 * ((100vw - 375px) / 1065))), 234px);
+  inline-size: clamp(198px, calc(198px + (36 * ((100vw - 375px) / 1065))),234px);
 }
 
 .modal__button {
   text-transform: uppercase;
   block-size: 2.375rem;
 }
-
